@@ -14,5 +14,3 @@ Other Notes:
 - currently only works with those specific filetypes and directory structure (one folder per experimental group)
 - must have behavior and feature names exactly right (look at .annot file to get these)
 - automatically trims behavior and feature matrix to start at intruder_enter time which is specified in .annot. The .annot file comes from processing MARS output in BENTO. In BENTO ensure you add an intruder_enter annotation
-
-Still in rough form. 
