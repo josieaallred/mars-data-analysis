@@ -21,10 +21,10 @@ group_dict = {
 
 dpi=100
 
-plt.rcParams['axes.labelsize'] = 26 # Axis titles (X and Y)
-plt.rcParams['xtick.labelsize'] = 26  # X-tick dimensions
-plt.rcParams['ytick.labelsize'] = 26   # Y-tick dimensions
-plt.rcParams['axes.titlesize'] = 26
+# plt.rcParams['axes.labelsize'] = 26 # Axis titles (X and Y)
+# plt.rcParams['xtick.labelsize'] = 26  # X-tick dimensions
+# plt.rcParams['ytick.labelsize'] = 26   # Y-tick dimensions
+# plt.rcParams['axes.titlesize'] = 26
 
 # ==========================================
 # 1. HEATMAP RASTER PLOTTING UTILITY
@@ -580,31 +580,18 @@ def group_comparison(feature_name, behavior_name, back_window=60, forward_window
 
     if plot: 
         plt.axvline(x=0, linestyle='--', color='#2c3e50', lw=1.2, zorder=0)
-        # plt.title(f"Behavior: {behavior_name.upper()} ({align.upper()}-Aligned) | Feature: {feature_name}\nFilters: min={min_duration}, max={max_duration}, Context={context_filter}", 
-        #           fontsize=11, fontweight='bold', pad=12)
-        # plt.ylabel("Angle(degrees)")
-        plt.text(
-                -0.06, 1.1, 'Onset',                      # (x_data, y_axis_fraction, text)
-                transform=plt.gca().get_xaxis_transform(),    # Keeps Y relative (0 to 1)
-                color="k", fontsize=28,
-                va='top', ha='left'                           # Align top-left of text to coordinates
-            )
-        plt.ylabel(f'Distance (cm)', labelpad=12)
-        plt.xlabel(f'Time (s)', labelpad=12)
-        plt.xticks([0, 0.5])
-        # plt.ylim(np.pi/6, np.pi * 13 / 14)
-        # plt.yticks([np.pi/4, np.pi / 2, 3*np.pi/4], labels=['45°', '90°', '135°'])
+        plt.title(f"Behavior: {behavior_name.upper()} ({align.upper()}-Aligned) | Feature: {feature_name}\nFilters: min={min_duration}, max={max_duration}, Context={context_filter}", 
+                  fontsize=11, fontweight='bold', pad=12)
 
-        # plt.grid(True, linestyle='--', alpha=0.3, zorder=0)
-        # plt.legend(frameon=True, facecolor='white', edgecolor='none', fontsize='x-large')
-        # plt.legend(
-        #     loc='upper left',           # Pin the top-left of the legend...
-        #     bbox_to_anchor=(0.0, -0.15),# ...to 18% below the bottom-left corner of the plot
-        #     ncols=5,                    # Flattens entries into a single horizontal row (adjust to match your total items)
-        #     frameon=False,              # Removes the box border completely                # Legend text size
-        #     columnspacing=1.5,          # Space between horizontal legend items
-        #     handletextpad=0.5           # Space between color symbol and text label
-        # )
+        plt.legend(frameon=True, facecolor='white', edgecolor='none', fontsize='x-large')
+        plt.legend(
+            loc='upper left',           # Pin the top-left of the legend...
+            bbox_to_anchor=(0.0, -0.15),# ...to 18% below the bottom-left corner of the plot
+            ncols=5,                    # Flattens entries into a single horizontal row (adjust to match your total items)
+            frameon=False,              # Removes the box border completely                # Legend text size
+            columnspacing=1.5,          # Space between horizontal legend items
+            handletextpad=0.5           # Space between color symbol and text label
+        )
 
         plt.gca().spines['top'].set_visible(False)
         plt.gca().spines['right'].set_visible(False)
