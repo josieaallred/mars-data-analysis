@@ -11,6 +11,7 @@ Functionality:
 - PCA_plotting: use same filters as in feature_comparison main and plot datapoints for a single behavior in two dimensions with PCA. Compare distributions between behaviors with a few statistics.
 
 Other Notes:
+- must edit paths to data in all of the files (behavior_data_extractor, feature_data_extractor, PCA_plotting.py)
 - currently only works with those specific filetypes and directory structure (one folder per experimental group)
 - must have behavior and feature names exactly right (look at .annot file to get these)
 - automatically trims behavior and feature matrix to start at intruder_enter time which is specified in .annot. The .annot file comes from processing MARS output in BENTO. In BENTO ensure you add an intruder_enter annotation
