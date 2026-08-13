@@ -2,7 +2,7 @@
 Processes output from the Mouse Action Recognition system and BENTO, specifically a .annot and .npz file. Includes functions to output cleaned feature and behavior arrays, identify significant features difference between groups, and compare groups using principle components. Still in rough form. 
 
 Input data:
-- for each experiment you need a matching .annot and .npz file which begin with the same 3-digit idea
+- for each video you need a matching .annot and .npz file which begin with the same 3-digit ID
 - put these pairs of files into one folder for mutant and another for control
 - these file paths must be inputted into the data extractor scripts (this may be updated in future)
 
